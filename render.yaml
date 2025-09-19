@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: telegram-media-filter-bot
+    env: python
+    pythonVersion: 3.12.6
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        value: "8167264410:AAHYQgPVe_HyqIQLxZ6yuGFABWCw5Bb-P74"
+      - key: GROUP_ID
+        value: "-1002754430828"
+      - key: ADMIN_IDS
+        value: "6046272730", "7750778341"
