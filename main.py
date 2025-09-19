@@ -12,7 +12,7 @@ from telegram.ext import (
 
 load_dotenv()
 
-BOT_TOKEN = os.getenv("BOT_TOKEN")
+BOT_TOKEN = os.getenv("8167264410:AAHYQgPVe_HyqIQLxZ6yuGFABWCw5Bb-P74")
 ADMIN_IDS = list(map(int, os.getenv("ADMIN_IDS").split(",")))
 
 # Channel mapping
