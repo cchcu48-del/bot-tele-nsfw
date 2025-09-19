@@ -12,8 +12,14 @@ from telegram.ext import (
 
 load_dotenv()
 
-BOT_TOKEN = os.getenv("8167264410:AAHYQgPVe_HyqIQLxZ6yuGFABWCw5Bb-P74")
-ADMIN_IDS = list(map(int, os.getenv("7750778341").split(",")))
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+ADMIN_IDS = list(map(int, os.getenv("ADMIN_IDS", "").split(",")))
+
+if not BOT_TOKEN:
+    raise ValueError("BOT_TOKEN belum diset! Cek environment variable di Render.")
+
+if not ADMIN_IDS:
+    raise ValueError("ADMIN_IDS belum diset! Cek environment variable di Render.")
 
 # Channel mapping
 CHANNEL_MAPPING = {
